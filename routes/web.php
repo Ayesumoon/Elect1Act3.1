@@ -10,10 +10,10 @@ Route::get('/item/{itemNo}/{name}/{price}', function ($itemNo, $name, $price) {
     return view('item', compact('itemNo', 'name', 'price'));
 });
 
-Route::get('/order/{custId}/{custName}/{orderNo}/{date}', function ($custId, $custName, $orderNo, $date) {
-    return view('order', compact('custId', 'custName', 'orderNo', 'date'));
+Route::get('/order/{customerId}/{customerName}/{orderNo}/{date}', function ($customerId, $customerName, $orderNo, $date) {
+    return view('order', compact('customerId', 'customerName', 'orderNo', 'date'));
 });
 
-Route::get('/orderDetails/{transNo}/{orderNo}/{itemId}/{itemName}/{price}/{qty}', function ($transNo, $orderNo, $itemId, $itemName, $price, $qty) {
-    return view('order_detail', compact('transNo', 'orderNo', 'itemId', 'itemName', 'price', 'qty'));
+Route::get('/orderDetails/{transNo}/{orderNo}/{itemId}/{name}/{price}/{qty}', function ($transNo, $orderNo, $itemId, $name, $price, $qty) {
+    return view('orderDetails', compact('transNo', 'orderNo', 'itemId', 'name', 'price', 'qty'));
 });
